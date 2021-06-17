@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>success</title>
+  </head>
+
+  <body>
+    <p style="background-color: #bcec0f">
+      ------------ File uploaded successfully. FileName:
+      {{request.files['file'].filename}} ------------
+    </p>
+    <p>Image's Numpy array:</p>
+    <p>{{array}}</p>
+    <br /><br />
+    <p>Numpy to picture converted and saved in: ---- {{pic}}</p>
+    <br /><br />
+    <img
+      src="{{ url_for('static', filename=filename) }}"
+      width="640"
+      height="440"
+    />
+  </body>
+</html>
